@@ -1,0 +1,51 @@
+Run tests by substring matching:
+
+Let we have three methods:
+
+1.def test_login():
+2.test_datasource_login():
+3.def test_entity():
+
+Here to run all the tests having login in its functiona name we have to run 
+
+
+py.test -k login -v
+
+it will execute below methods
+
+def test_login():
+test_datasource_login():
+
+and Not below:
+ 
+def test_entity():
+
+****************************
+
+Run tests by markers:
+Below command is used to run function whose marker is "set1", it will only execute 1st and 3rd function and it will ignore 2nd function.
+py.test -m set1.
+
+@pytest.mark.set1
+def test_login():
+
+def test_datasource_login():
+
+@pytest.mark.set1
+def test_entity():
+
+
+
+*******************************************
+Pytest fixtures:
+Fixtures are used when we want to run some code before every test method. So instead of repeating the same code in every test we define fixtures.
+
+@pytest.fixture
+def test_login():
+
+def test_datasource_login():
+
+def test_entity():
+
+below command will execute test_lgin function before both fucntions every time.
+ py.test test_basic_fixture

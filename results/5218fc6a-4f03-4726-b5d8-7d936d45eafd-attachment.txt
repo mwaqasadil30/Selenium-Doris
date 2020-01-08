@@ -1,0 +1,5 @@
+Choose your Data Source
+SELECT branchid, recordactivitydate, branchname, branchstatusraw, branchstatus, iscentralormainbranch, isipedsreportable FROM $$CSV_TABLE_NAME
+×
+Success
+Query test ran successfully with no errors.

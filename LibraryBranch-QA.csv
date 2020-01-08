@@ -1,0 +1,4 @@
+﻿branchId,recordActivityDate,branchName,branchStatusRaw,branchStatus,isCentralOrMainBranch,isIPEDSReportable
+1,2019-10-31T01:51:06.886Z,Main Branch,Active,Active,TRUE,FALSE
+2,2019-10-31T01:51:40.322Z,Side Branch,Active,Active,FALSE,TRUE
+3,2019-10-31T01:52:13.039Z,Other Branch,Inactive,Inactive,FALSE,TRUE

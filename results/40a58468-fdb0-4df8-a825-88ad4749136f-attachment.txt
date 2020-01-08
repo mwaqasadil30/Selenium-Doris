@@ -1,0 +1,6 @@
+We Want to Configure: Library Branch
+spinner is disappeared on Detail page
+Data Source is configured already, we are going to click on Reset Entity button
+Are you sure you want to reset this Entity?
+Data Source was not selected already
+Choose your Data Source

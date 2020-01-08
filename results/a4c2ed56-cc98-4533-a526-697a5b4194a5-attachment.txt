@@ -1,0 +1,5 @@
+We Want to Configure: Library Branch
+spinner is disappeared on Detail page
+Data Source was not configured already
+Selected data source is removed
+Choose your Data Source

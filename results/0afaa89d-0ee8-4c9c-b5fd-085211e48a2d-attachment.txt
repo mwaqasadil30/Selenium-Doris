@@ -1,0 +1,3 @@
+×
+Success
+Query test ran successfully with no errors.
