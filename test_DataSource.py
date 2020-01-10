@@ -33,7 +33,7 @@ class DataSource_Locators():
 
         self.DATASOURCE_COLLEAGUE_RADIO = 'input[value="Colleague"]'
         self.HOST_NAME = 'host'
-        self.PORT_NAME = 'port'
+        self.PORT = (By.NAME, 'port')
         self.SID_NAME = 'sid'
         self.USER_NAME = 'dbUsername'
         self.PASSWORD = 'dbPassword'
@@ -107,7 +107,7 @@ class DataSource_Implementation(DataSource_Locators):
 
         host = self.driver.find_element_by_name(self.HOST_NAME)
         host.send_keys(constant.HOST_NAME)
-        port = self.driver.find_element_by_name(self.PORT_NAME)
+        port = self.wait.until(ec.visibility_of_element_located(self.PORT))
         port.send_keys(constant.PORT)
         sid = self.driver.find_element_by_name(self.SID_NAME)
         sid.send_keys(constant.SID)
@@ -134,7 +134,7 @@ class DataSource_Implementation(DataSource_Locators):
         edit_link = self.wait.until(ec.visibility_of_all_elements_located(self.EDIT_LINK))
         edit_link[0].click()
         self.spinner_disappear()
-        port = self.driver.find_element_by_name(self.PORT_NAME)
+        port = self.wait.until(ec.visibility_of_element_located(self.PORT))
         port.send_keys(Keys.CONTROL, 'a')
         port.send_keys(Keys.BACKSPACE)
         port.send_keys("1234")

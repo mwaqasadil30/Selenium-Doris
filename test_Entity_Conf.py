@@ -124,6 +124,7 @@ class Entity_Configuration(Entity_Conf_Locators):
         choose_your_datasource = self.wait.until(ec.visibility_of_element_located(self.TITLE_CHOOSE_DATASORUCE))
         print(choose_your_datasource.text)
         assert choose_your_datasource.text == 'Choose your Data Source'
+        time.sleep(120)
         choose_datasource_dropdown = self.wait.until(ec.visibility_of_element_located(self.CHOOSE_DATASOURCE_DROPDOWN))
         choose_datasource_dropdown.send_keys(constant.CSV_DATASOURCE)
         choose_datasource_dropdown.send_keys(Keys.ENTER)
