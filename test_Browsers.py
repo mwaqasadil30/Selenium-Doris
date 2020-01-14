@@ -1,14 +1,14 @@
 from selenium import webdriver
 from test_Constant_Elements import *
-from webdriver_manager.chrome import ChromeDriverManager
+# from webdriver_manager.chrome import ChromeDriverManager
 
 constant = Constants()
 
 class Browser():
 
     def chrome(self):
-        driver = webdriver.Chrome(ChromeDriverManager().install())
-        # driver = webdriver.Chrome(constant.CHROME)
+        # driver = webdriver.Chrome(ChromeDriverManager().install())
+        driver = webdriver.Chrome(constant.CHROME)
         driver.maximize_window()
         driver.get(constant.URL)
         return driver
